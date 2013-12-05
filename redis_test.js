@@ -4,7 +4,7 @@
         console.log("Error " + err);
     });
     
-	jsonBlob = "{
+	var jsonBlob = "{
 	"imageID hash of file":{
 		"filename":"myfile.png",
 		"locType":"local|blobStore",
