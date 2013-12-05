@@ -4,15 +4,13 @@
         console.log("Error " + err);
     });
     
-	var jsonBlob = "{" +
-			"imageID hash of file:{"+
-			"filename:myfile.png}}";
+	var jsonBlob = '{"foo":"bar"}';
 	client.set("imageID1", jsonBlob, redis.print);
 	client.get("imageID1", function (err, res) {
 		console.log("straight string response: " +res);
 		
 		var backToJSON = JSON.parse(res);
-		console.log("JSON parsed: " + backToJSON);
+		console.log("JSON parsed: " + backToJSON.foo);
 
 		});
 	client.quit();
