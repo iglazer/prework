@@ -1,5 +1,10 @@
 {
+	"name":"prework",
+	"description":"get my brain ready for the real work",
+	"version":"0.0.1",
+	"private": true,
 	"dependencies": {
-		"redis":""
+		"redis":"",
+		"express":"3.x"
 	}
 } 
