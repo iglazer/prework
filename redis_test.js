@@ -8,6 +8,6 @@
 	client.set("imageID1", jsonBlob, redis.print);
 	client.get("imageID1", function (err, res) {
 		console.log(res);
-		};
+		});
 	client.quit();
 	
