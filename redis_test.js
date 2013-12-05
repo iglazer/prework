@@ -4,17 +4,7 @@
         console.log("Error " + err);
     });
     
-	var jsonBlob = "{
-	"imageID hash of file":{
-		"filename":"myfile.png",
-		"locType":"local|blobStore",
-		"name":"pretty name",
-		"desc":"pretty desc",
-		"exif":{
-			"EXIF data":"blah"
-		}
-	}
-";
+	var jsonBlob = "foo";
 	client.set("imageID1", jsonBlob, redis.print);
 	client.quit();
 	
