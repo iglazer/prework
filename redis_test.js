@@ -9,16 +9,10 @@
 			"filename:myfile.png}}";
 	client.set("imageID1", jsonBlob, redis.print);
 	client.get("imageID1", function (err, res) {
-		console.log(res);
-		function tryParseJson(res, callback) {
-			process.nextTick(function () {
-			  try {
-				  callback(null, JSON.parse(str));
-			  } catch (ex) {
-				  callback(ex)
-			  }
-			})
-		};
+		console.log("straight string response: " +res);
+		
+		var backToJSON = JSON.parse(res);
+		console.log("JSON parsed: " + backToJSON);
 
 		});
 	client.quit();
